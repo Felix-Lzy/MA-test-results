@@ -1,0 +1,142 @@
+Last login: Sat Mar  9 13:12:31 2024 from 172.17.240.1
+cd /home/zhiyu && 2030_5_server --no-validate config.yml
+[?2004hzhiyu@ubuntu:~$ cd /home/zhiyu && 2030_5_server --no-validate config.yml
+[?2004lUsing configuration from /home/zhiyu/tls/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 1 (0x1)
+        Validity
+            Not Before: Mar 10 00:07:06 2024 GMT
+            Not After : Mar 10 00:07:06 2025 GMT
+        Subject:
+            countryName               = US
+            commonName                = 172.17.244.162
+Certificate is to be certified until Mar 10 00:07:06 2025 GMT (365 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Using configuration from /home/zhiyu/tls/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 2 (0x2)
+        Validity
+            Not Before: Mar 10 00:07:06 2024 GMT
+            Not After : Mar 10 00:07:06 2025 GMT
+        Subject:
+            countryName               = US
+            commonName                = admin
+Certificate is to be certified until Mar 10 00:07:06 2025 GMT (365 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Using configuration from /home/zhiyu/tls/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 3 (0x3)
+        Validity
+            Not Before: Mar 10 00:07:06 2024 GMT
+            Not After : Mar 10 00:07:06 2025 GMT
+        Subject:
+            countryName               = US
+            commonName                = dev1
+Certificate is to be certified until Mar 10 00:07:06 2025 GMT (365 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Using configuration from /home/zhiyu/tls/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 4 (0x4)
+        Validity
+            Not Before: Mar 10 00:07:07 2024 GMT
+            Not After : Mar 10 00:07:07 2025 GMT
+        Subject:
+            countryName               = US
+            commonName                = dev2
+Certificate is to be certified until Mar 10 00:07:07 2025 GMT (365 days)
+
+Write out database with 1 new entries
+Data Base Updated
+ * Serving Flask app 'ieee_2030_5.flask_server'
+ * Debug mode: off
+INFO:werkzeug:WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on https://172.17.244.162:7443
+INFO:werkzeug:Press CTRL+C to quit
+INFO:werkzeug: * Restarting with stat
+Using configuration from /home/zhiyu/tls/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 1 (0x1)
+        Validity
+            Not Before: Mar 10 00:07:08 2024 GMT
+            Not After : Mar 10 00:07:08 2025 GMT
+        Subject:
+            countryName               = US
+            commonName                = 172.17.244.162
+Certificate is to be certified until Mar 10 00:07:08 2025 GMT (365 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Using configuration from /home/zhiyu/tls/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 2 (0x2)
+        Validity
+            Not Before: Mar 10 00:07:09 2024 GMT
+            Not After : Mar 10 00:07:09 2025 GMT
+        Subject:
+            countryName               = US
+            commonName                = admin
+Certificate is to be certified until Mar 10 00:07:09 2025 GMT (365 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Using configuration from /home/zhiyu/tls/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 3 (0x3)
+        Validity
+            Not Before: Mar 10 00:07:09 2024 GMT
+            Not After : Mar 10 00:07:09 2025 GMT
+        Subject:
+            countryName               = US
+            commonName                = dev1
+Certificate is to be certified until Mar 10 00:07:09 2025 GMT (365 days)
+
+Write out database with 1 new entries
+Data Base Updated
+Using configuration from /home/zhiyu/tls/openssl.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 4 (0x4)
+        Validity
+            Not Before: Mar 10 00:07:09 2024 GMT
+            Not After : Mar 10 00:07:09 2025 GMT
+        Subject:
+            countryName               = US
+            commonName                = dev2
+Certificate is to be certified until Mar 10 00:07:09 2025 GMT (365 days)
+
+Write out database with 1 new entries
+Data Base Updated
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 01:10:54] "POST /mup_0 HTTP/1.1" 201 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 01:11:42] "GET /mup_0 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 01:11:50] "GET /mup_0 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 01:12:32] "GET /mup_0 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 01:12:38] "POST /mup_0 HTTP/1.1" 204 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 01:12:38] "GET /mup_0 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 01:13:38] "GET /mup_0 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 01:16:53] "GET /mup_0 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 01:16:59] "GET /mup_0 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 01:23:47] "POST /mup_0 HTTP/1.1" 204 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 01:23:47] "GET /mup_0 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 02:00:25] "GET /mup_0 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.240.1 - - [10/Mar/2024 02:00:35] "GET /mup_0 HTTP/1.1" 200 -

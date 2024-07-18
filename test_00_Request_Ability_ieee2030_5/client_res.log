@@ -1,0 +1,120 @@
+----> GET REQUEST
+url: /dcap body: None
+Server: Werkzeug/3.0.0 Python/3.10.12
+Date: Tue, 24 Oct 2023 22:14:29 GMT
+Content-Type: application/sep+xml
+Content-Length: 290
+Connection: close
+
+
+<---- GET RESPONSE
+<DeviceCapability xmlns="urn:ieee:std:2030.5:ns" href="/dcap" pollRate="60">
+  <ResponseSetListLink href="/rsps" all="0"/>
+  <TimeLink href="/tm"/>
+  <UsagePointListLink href="/upt"/>
+  <EndDeviceListLink href="/edev" all="1"/>
+  <MirrorUsagePointListLink href="/mup"/>
+</DeviceCapability>
+
+----> GET REQUEST
+url: /edev body: None
+Server: Werkzeug/3.0.0 Python/3.10.12
+Date: Tue, 24 Oct 2023 22:14:29 GMT
+Content-Type: application/sep+xml
+Content-Length: 571
+Connection: close
+
+
+<---- GET RESPONSE
+<EndDeviceList xmlns="urn:ieee:std:2030.5:ns" href="/edev" subscribable="0" all="1" results="1" pollRate="900">
+  <EndDevice href="/edev_0">
+    <DERListLink href="/edev_0_der"/>
+    <deviceCategory>20</deviceCategory>
+    <DeviceInformationLink href="/edev_0_di"/>
+    <DeviceStatusLink href="/edev_0_dstat"/>
+    <lFDI>0BBCA10467AA4E351E0D0FF8E3D1E7C1818DBF38</lFDI>
+    <sFDI>31505818306</sFDI>
+    <changedTime>1698178360</changedTime>
+    <FunctionSetAssignmentsListLink href="/edev_0_fsa"/>
+    <RegistrationLink href="/edev_0_rg"/>
+  </EndDevice>
+</EndDeviceList>
+
+----> GET REQUEST
+url: /edev body: None
+Server: Werkzeug/3.0.0 Python/3.10.12
+Date: Tue, 24 Oct 2023 22:14:30 GMT
+Content-Type: application/sep+xml
+Content-Length: 571
+Connection: close
+
+
+<---- GET RESPONSE
+<EndDeviceList xmlns="urn:ieee:std:2030.5:ns" href="/edev" subscribable="0" all="1" results="1" pollRate="900">
+  <EndDevice href="/edev_0">
+    <DERListLink href="/edev_0_der"/>
+    <deviceCategory>20</deviceCategory>
+    <DeviceInformationLink href="/edev_0_di"/>
+    <DeviceStatusLink href="/edev_0_dstat"/>
+    <lFDI>0BBCA10467AA4E351E0D0FF8E3D1E7C1818DBF38</lFDI>
+    <sFDI>31505818306</sFDI>
+    <changedTime>1698178360</changedTime>
+    <FunctionSetAssignmentsListLink href="/edev_0_fsa"/>
+    <RegistrationLink href="/edev_0_rg"/>
+  </EndDevice>
+</EndDeviceList>
+
+----> GET REQUEST
+url: /edev_0_fsa body: None
+Server: Werkzeug/3.0.0 Python/3.10.12
+Date: Tue, 24 Oct 2023 22:14:30 GMT
+Content-Type: application/sep+xml
+Content-Length: 292
+Connection: close
+
+
+<---- GET RESPONSE
+<FunctionSetAssignmentsList xmlns="urn:ieee:std:2030.5:ns" href="/edev_0_fsa" subscribable="0" all="1" results="1" pollRate="900">
+  <FunctionSetAssignments href="/fsa_0" subscribable="0">
+    <DERProgramListLink href="/fsa_0_derp"/>
+  </FunctionSetAssignments>
+</FunctionSetAssignmentsList>
+
+----> GET REQUEST
+url: /edev_0_fsa body: None
+Server: Werkzeug/3.0.0 Python/3.10.12
+Date: Tue, 24 Oct 2023 22:14:30 GMT
+Content-Type: application/sep+xml
+Content-Length: 292
+Connection: close
+
+
+<---- GET RESPONSE
+<FunctionSetAssignmentsList xmlns="urn:ieee:std:2030.5:ns" href="/edev_0_fsa" subscribable="0" all="1" results="1" pollRate="900">
+  <FunctionSetAssignments href="/fsa_0" subscribable="0">
+    <DERProgramListLink href="/fsa_0_derp"/>
+  </FunctionSetAssignments>
+</FunctionSetAssignmentsList>
+
+----> GET REQUEST
+url: /fsa_0_derp body: None
+Server: Werkzeug/3.0.0 Python/3.10.12
+Date: Tue, 24 Oct 2023 22:14:30 GMT
+Content-Type: application/sep+xml
+Content-Length: 489
+Connection: close
+
+
+<---- GET RESPONSE
+<DERProgramList xmlns="urn:ieee:std:2030.5:ns" subscribable="0" all="1" results="1" pollRate="900">
+  <DERProgram href="/derp_0" subscribable="0">
+    <mRID>CAE7ED960172411FB48282CE9B6E7075</mRID>
+    <description>Program 1</description>
+    <ActiveDERControlListLink href="/derp_0_derca"/>
+    <DefaultDERControlLink href="/derp_0_dderc"/>
+    <DERControlListLink href="/derp_0_derc"/>
+    <DERCurveListLink href="/derp_0_dc"/>
+    <primacy>89</primacy>
+  </DERProgram>
+</DERProgramList>
+
