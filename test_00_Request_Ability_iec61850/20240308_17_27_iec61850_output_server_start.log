@@ -1,0 +1,682 @@
+Last login: Fri Mar  8 17:05:51 2024 from 10.8.0.2
+cd /home/zhiyu/work/pyiec61850der-main/pyiec61850der && python3.7 ./tester/runTester.py
+[?2004hzhiyu@ubuntu:~$ cd /home/zhiyu/work/pyiec61850der-main/pyiec61850der && python3.7 ./tester/runTester.py
+[?2004lcheck files in working directory
+['interface', 'tls_iec61850', 'data', 'modbusTCP', 'configTester.yaml', 'configurator', 'implementation_errors_log.txt', 'simulation', 'processing', 'container', '.vscode', 'converter', 'model', 'tester', 'pylibiec61850', 'optimization', 'virtual_machine', 'communication', 'virtual_environ_creat_process.txt', 'secret', 'logs']
+Pyiec61850der tester is ready for use, list of testers:
+1 - Configurator tester
+2 - Model Generator tester
+3 - IED server tester
+4 - Initialising CLS application tester (static test server)
+5 - Initialising CLS application tester (dynamic customized server)
+6 - IEC 61850 IED client tester
+
+
+Start the test for initialising the IEC 61850 compliant virtual CLS controller
+INFO:dataModelTemplateLogger:Logger dataModelTemplateLogger initialized
+INFO:iec61850DataModelGenerator:Logger iec61850DataModelGeneratorLogger initialized
+INFO:iedServerBuilder:Logger iedServerBuilderLogger initialized
+!!!!!!!!!!!!!!!!!!!!!!!!!!runVirtualCLS
+check files in working directory
+['pyiec61850der-main']
+INFO:configurator.config:=================   Begin load local config   =================
+INFO:configurator.config:Unknown config parameter timeMonitorReserve has been added to the config instance CLS
+INFO:configurator.config:Unknown config parameter timeTriggerLocalArchive has been added to the config instance CLS
+INFO:configurator.config:Unknown config parameter placeholder has been added to the config instance influxdb
+INFO:configurator.config:Unknown config parameter forceOverwrite has been added to the config instance interface
+INFO:configurator.config:=================   End load local config   =================
+
+INFO:configurator.config:=================   Begin get DER information   =================
+INFO:configurator.config:-------------  Display <der> configuration  -------------
+INFO:configurator.config:nPV: 1
+INFO:configurator.config:nLOAD: 1
+INFO:configurator.config:nSTO: 1
+INFO:configurator.config:-------------  Display <container> configuration  -------------
+INFO:configurator.config:port: None
+INFO:configurator.config:containerGUID: 77ca062d-2ab7-4612-a2f9-9db57c2a2e0c
+INFO:configurator.config:serviceName: pyiec61850der_tester
+INFO:configurator.config:containerName: pyiec61850der_tester
+INFO:configurator.config:network: influxdb_network
+INFO:configurator.config:timeMode: simulation
+INFO:configurator.config:startTime: 2016-06-01 11:00:00
+INFO:configurator.config:endTime: 2016-06-01 18:00:00
+INFO:configurator.config:routineStartTime: NaN
+INFO:configurator.config:timezone: Europe/Berlin
+INFO:configurator.config:-------------  Display <influxdb> configuration  -------------
+INFO:configurator.config:placeholder: None
+INFO:configurator.config:-------------  Display <CLS> configuration  -------------
+INFO:configurator.config:port: 61850
+INFO:configurator.config:hostname: 10.8.0.1
+INFO:configurator.config:derType: pv
+INFO:configurator.config:nameIED: demoVirtualCLS
+INFO:configurator.config:interval: 30
+INFO:configurator.config:nControlIteration: 10
+INFO:configurator.config:timeMonitorReserve: 5
+INFO:configurator.config:timeTriggerLocalArchive: 900
+INFO:configurator.config:timeTriggerDataUpload: 300
+INFO:configurator.config:-------------  Display <pcc> configuration  -------------
+INFO:configurator.config:placeholder: None
+INFO:configurator.config:-------------  Display <interface> configuration  -------------
+INFO:configurator.config:pathSCL: ./tester/IEC61850_DER_v1_slim.cid
+INFO:configurator.config:pathSunspecMapping: ./interface/interface_SunSpec.xlsx
+INFO:configurator.config:pathLookupCSV: ./tester/IEC61850_DA_lookup_tester_DER_slim.csv
+INFO:configurator.config:pathConfigYAML: ./tester/configTester.yaml
+INFO:configurator.config:pathConfigDataModel: ./model/config_IEC61850_model.xlsx
+INFO:configurator.config:keepNonePara: True
+INFO:configurator.config:forceOverwrite: False
+INFO:configurator.config:dictConfigYAML: {'DER': {'nPV': 1, 'nLOAD': 1, 'nSTO': 1}, 'Container': {'port': None, 'containerGUID': '77ca062d-2ab7-4612-a2f9-9db57c2a2e0c', 'serviceName': 'pyiec61850der_tester', 'containerName': 'pyiec61850der_tester', 'network': 'influxdb_network', 'timeMode': 'simulation', 'startTime': '2016-06-01 11:00:00', 'endTime': '2016-06-01 18:00:00', 'routineStartTime': 'NaN', 'timezone': 'Europe/Berlin'}, 'CLS': {'port': 61850, 'hostname': '10.8.0.1', 'derType': 'pv', 'nameIED': 'demoVirtualCLS', 'interval': 30, 'nControlIteration': 10, 'timeMonitorReserve': 5, 'timeTriggerLocalArchive': 900, 'timeTriggerDataUpload': 300}, 'PV1': {'dataSource': 'local', 'ratedPower': 35, 'unitFactor': 1000, 'scaleFactor': 1, 'inverterIP': '192.168.1.254', 'inverterSlaveID': 1, 'tcpPort': 502}, 'STO1': {'placeholder': None}, 'LOAD1': {'placeholder': None, 'dataSource': 'local'}, 'PCC': {'placeholder': None}, 'Influxdb': {'placeholder': None}, 'Interface': {'pathSCL': './tester/IEC61850_DER_v1_slim.cid', 'pathSunspecMapping': './interface/interface_SunSpec.xlsx', 'pathLookupCSV': './tester/IEC61850_DA_lookup_tester_DER_slim.csv', 'pathConfigYAML': './tester/configTester.yaml', 'pathConfigDataModel': './model/config_IEC61850_model.xlsx', 'keepNonePara': True, 'forceOverwrite': False}}
+INFO:configurator.config:-------------  Display <pv1> configuration  -------------
+INFO:configurator.config:dataSource: local
+INFO:configurator.config:ratedPower: 35
+INFO:configurator.config:unitFactor: 1000
+INFO:configurator.config:scaleFactor: 1
+INFO:configurator.config:inverterIP: 192.168.1.254
+INFO:configurator.config:inverterSlaveID: 1
+INFO:configurator.config:tcpPort: 502
+INFO:configurator.config:-------------  Display <load1> configuration  -------------
+INFO:configurator.config:placeholder: None
+INFO:configurator.config:dataSource: local
+INFO:configurator.config:-------------  Display <sto1> configuration  -------------
+INFO:configurator.config:placeholder: None
+INFO:configurator.config:=================   End get DER information   =================
+
+INFO:configurator.config:Start initialising container time.
+INFO:configurator.config:End initialising container time.
+*******************************************************run clsInitialization
+INFO:pyiec61850cls:-------------------------------------------------------------------
+INFO:pyiec61850cls:Start influxdb interface initialisation
+ERROR:configurator.config:Secret file influxdb.json not found, please check it and restart the program.
+WARNING:pyiec61850cls:Loading influxdb configuration failed, use local profile instead
+INFO:pyiec61850cls:End of influxdb interface initialisation
+INFO:pyiec61850cls:-------------------------------------------------------------------
+
+INFO:iedServerBuilder:Start the build process of a new IEC 61850 data model.
+INFO:iedServerBuilder:Date model with the IED name demoVirtualCLS has been generated
+INFO:iedServerBuilder:Checking LD name of CLS
+INFO:iedServerBuilder:Create Logical Device CLS in the IED server
+INFO:iedServerBuilder:Start the build process for the LD CLS
+INFO:iedServerBuilder:Start build Data Objects in LN LLN0_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN LPHD_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN LPHD_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:The LN Platform_LPHD1 has no DataSet
+INFO:iedServerBuilder:The LN Hardware_LPHD1 has no DataSet
+INFO:iedServerBuilder:The LN LLN0 has no DataSet
+INFO:iedServerBuilder:The LN Platform_LPHD1 has no Report Control Block
+INFO:iedServerBuilder:The LN Hardware_LPHD1 has no Report Control Block
+INFO:iedServerBuilder:The LN LLN0 has no Report Control Block
+INFO:iedServerBuilder:Checking LD name of PCC
+INFO:iedServerBuilder:Create Logical Device PCC in the IED server
+INFO:iedServerBuilder:Start the build process for the LD PCC
+INFO:iedServerBuilder:Start build Data Objects in LN LLN0_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN DPCC_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 1 DO from the LN Template DPCC_0
+WARNING:iedServerBuilder:Dropping DO ElcMsRef of type ORG_0 from LN template DPCC_0.
+INFO:iedServerBuilder:Start build Data Objects in LN MMXU_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN MMTR_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:The LN DPCC1 has no DataSet
+INFO:iedServerBuilder:The LN MMXU1 has no DataSet
+INFO:iedServerBuilder:The LN MMTR1 has no DataSet
+INFO:iedServerBuilder:The LN LLN0 has no DataSet
+INFO:iedServerBuilder:The LN DPCC1 has no Report Control Block
+INFO:iedServerBuilder:The LN MMXU1 has no Report Control Block
+INFO:iedServerBuilder:The LN MMTR1 has no Report Control Block
+INFO:iedServerBuilder:The LN LLN0 has no Report Control Block
+INFO:iedServerBuilder:Checking LD name of METEO
+INFO:iedServerBuilder:Create Logical Device METEO in the IED server
+INFO:iedServerBuilder:Start the build process for the LD METEO
+INFO:iedServerBuilder:Start build Data Objects in LN LLN0_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN FSCC_MV0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 4 DO from the LN Template FSCC_MV0
+WARNING:iedServerBuilder:Dropping DO InRef of type ORG_0 from LN template FSCC_MV0.
+WARNING:iedServerBuilder:Dropping DO Schd of type ORG_0 from LN template FSCC_MV0.
+WARNING:iedServerBuilder:Dropping DO CtlEnt of type ORG_0 from LN template FSCC_MV0.
+WARNING:iedServerBuilder:Dropping DO ActSchdRef of type ORS_0 from LN template FSCC_MV0.
+INFO:iedServerBuilder:Start build Data Objects in LN FSCH_MV0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 5 DO from the LN Template FSCH_MV0
+WARNING:iedServerBuilder:Dropping DO InRef of type ORG_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO InSyn of type ORG_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO StrTm of type TSG_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO NxtStrTm of type TCS_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO ActStrTm of type TCS_0 from LN template FSCH_MV0.
+INFO:iedServerBuilder:Start build Data Objects in LN MMET_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN LPHD_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:The LN PVGEN_FSCC1 has no DataSet
+INFO:iedServerBuilder:The LN PVGEN_FSCH1 has no DataSet
+INFO:iedServerBuilder:The LN MMET1 has no DataSet
+INFO:iedServerBuilder:The LN LPHD1 has no DataSet
+INFO:iedServerBuilder:The LN LLN0 has no DataSet
+INFO:iedServerBuilder:The LN PVGEN_FSCC1 has no Report Control Block
+INFO:iedServerBuilder:The LN PVGEN_FSCH1 has no Report Control Block
+INFO:iedServerBuilder:The LN MMET1 has no Report Control Block
+INFO:iedServerBuilder:The LN LPHD1 has no Report Control Block
+INFO:iedServerBuilder:The LN LLN0 has no Report Control Block
+INFO:iedServerBuilder:Checking LD name of PV1
+INFO:iedServerBuilder:Create Logical Device PV1 in the IED server
+INFO:iedServerBuilder:Start the build process for the LD PV1
+INFO:iedServerBuilder:Start build Data Objects in LN LLN0_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN MMTR_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN DSCT_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 4 DO from the LN Template DSCT_0
+WARNING:iedServerBuilder:Dropping DO CRteCost of type CSG_0 from LN template DSCT_0.
+WARNING:iedServerBuilder:Dropping DO HeatRteCost of type CSG_0 from LN template DSCT_0.
+WARNING:iedServerBuilder:Dropping DO HeatRteAct of type CSG_0 from LN template DSCT_0.
+WARNING:iedServerBuilder:Dropping DO Ccy of type CUG_0 from LN template DSCT_0.
+INFO:iedServerBuilder:Start build Data Objects in LN DINV_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 2 DO from the LN Template DINV_0
+WARNING:iedServerBuilder:Dropping DO WVArVLimSet of type CSG_0 from LN template DINV_0.
+WARNING:iedServerBuilder:Dropping DO WVArVLim of type CSG_0 from LN template DINV_0.
+INFO:iedServerBuilder:Start build Data Objects in LN DECP_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 1 DO from the LN Template DECP_0
+WARNING:iedServerBuilder:Dropping DO ElcMsRef of type ORG_0 from LN template DECP_0.
+INFO:iedServerBuilder:Start build Data Objects in LN DGEN_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 1 DO from the LN Template DGEN_0
+WARNING:iedServerBuilder:Dropping DO InclGn of type ORG_0 from LN template DGEN_0.
+INFO:iedServerBuilder:Start build Data Objects in LN MMXU_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN FSCH_MV0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 5 DO from the LN Template FSCH_MV0
+WARNING:iedServerBuilder:Dropping DO InRef of type ORG_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO InSyn of type ORG_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO StrTm of type TSG_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO NxtStrTm of type TCS_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO ActStrTm of type TCS_0 from LN template FSCH_MV0.
+INFO:iedServerBuilder:Start build Data Objects in LN DCCT_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 3 DO from the LN Template DCCT_0
+WARNING:iedServerBuilder:Dropping DO CRteCost of type CSG_0 from LN template DCCT_0.
+WARNING:iedServerBuilder:Dropping DO HeatRteCost of type CSG_0 from LN template DCCT_0.
+WARNING:iedServerBuilder:Dropping DO Ccy of type CUG_0 from LN template DCCT_0.
+INFO:iedServerBuilder:Start build Data Objects in LN FSCC_MV0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 4 DO from the LN Template FSCC_MV0
+WARNING:iedServerBuilder:Dropping DO InRef of type ORG_0 from LN template FSCC_MV0.
+WARNING:iedServerBuilder:Dropping DO Schd of type ORG_0 from LN template FSCC_MV0.
+WARNING:iedServerBuilder:Dropping DO CtlEnt of type ORG_0 from LN template FSCC_MV0.
+WARNING:iedServerBuilder:Dropping DO ActSchdRef of type ORS_0 from LN template FSCC_MV0.
+INFO:iedServerBuilder:The LN MMTR1 has no DataSet
+INFO:iedServerBuilder:The LN DSCT1 has no DataSet
+INFO:iedServerBuilder:The LN DINV1 has no DataSet
+INFO:iedServerBuilder:The LN DECP1 has no DataSet
+INFO:iedServerBuilder:The LN DGEN1 has no DataSet
+INFO:iedServerBuilder:The LN MMXU1 has no DataSet
+INFO:iedServerBuilder:The LN PVCTL_FSCH1 has no DataSet
+INFO:iedServerBuilder:The LN DCCT1 has no DataSet
+INFO:iedServerBuilder:The LN PVCTL_FSCC1 has no DataSet
+INFO:iedServerBuilder:Can not find DO WVArVLim in the LN Template after build, dump FCDA in DS
+INFO:iedServerBuilder:Can not find DO WVArVLimSet in the LN Template after build, dump FCDA in DS
+WARNING:iedServerBuilder:FCDA with reference WVArVLimSet is dumped in the DataSet PV1_SP_DINV1.
+WARNING:iedServerBuilder:FCDA with reference WVArVLim is dumped in the DataSet PV1_SP_DINV1.
+INFO:iedServerBuilder:Create DS object for the DataSet named PV1_SP_DINV1, 13 FCDA entries in this DS
+INFO:iedServerBuilder:Create DS object for the DataSet named PV1_MX_DGEN1, 17 FCDA entries in this DS
+INFO:iedServerBuilder:Create DS object for the DataSet named PV1_SP_DGEN1, 40 FCDA entries in this DS
+INFO:iedServerBuilder:Create DS object for the DataSet named PV1_MX_MMXU1, 40 FCDA entries in this DS
+INFO:iedServerBuilder:The LN MMTR1 has no Report Control Block
+INFO:iedServerBuilder:The LN DSCT1 has no Report Control Block
+INFO:iedServerBuilder:The LN DINV1 has no Report Control Block
+INFO:iedServerBuilder:The LN DECP1 has no Report Control Block
+INFO:iedServerBuilder:The LN DGEN1 has no Report Control Block
+INFO:iedServerBuilder:The LN MMXU1 has no Report Control Block
+INFO:iedServerBuilder:The LN PVCTL_FSCH1 has no Report Control Block
+INFO:iedServerBuilder:The LN DCCT1 has no Report Control Block
+INFO:iedServerBuilder:The LN PVCTL_FSCC1 has no Report Control Block
+INFO:iedServerBuilder:Checking LD name of LOAD1
+INFO:iedServerBuilder:Create Logical Device LOAD1 in the IED server
+INFO:iedServerBuilder:Start the build process for the LD LOAD1
+INFO:iedServerBuilder:Start build Data Objects in LN LLN0_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN MMTR_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN DLOD_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 2 DO from the LN Template DLOD_0
+WARNING:iedServerBuilder:Dropping DO OutEcpRef of type ORG_0 from LN template DLOD_0.
+WARNING:iedServerBuilder:Dropping DO DERUnit of type ORG_0 from LN template DLOD_0.
+INFO:iedServerBuilder:Start build Data Objects in LN DSCT_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 4 DO from the LN Template DSCT_0
+WARNING:iedServerBuilder:Dropping DO CRteCost of type CSG_0 from LN template DSCT_0.
+WARNING:iedServerBuilder:Dropping DO HeatRteCost of type CSG_0 from LN template DSCT_0.
+WARNING:iedServerBuilder:Dropping DO HeatRteAct of type CSG_0 from LN template DSCT_0.
+WARNING:iedServerBuilder:Dropping DO Ccy of type CUG_0 from LN template DSCT_0.
+INFO:iedServerBuilder:Start build Data Objects in LN DECP_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 1 DO from the LN Template DECP_0
+WARNING:iedServerBuilder:Dropping DO ElcMsRef of type ORG_0 from LN template DECP_0.
+INFO:iedServerBuilder:Start build Data Objects in LN MMXU_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN DCCT_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 3 DO from the LN Template DCCT_0
+WARNING:iedServerBuilder:Dropping DO CRteCost of type CSG_0 from LN template DCCT_0.
+WARNING:iedServerBuilder:Dropping DO HeatRteCost of type CSG_0 from LN template DCCT_0.
+WARNING:iedServerBuilder:Dropping DO Ccy of type CUG_0 from LN template DCCT_0.
+INFO:iedServerBuilder:The LN MMTR1 has no DataSet
+INFO:iedServerBuilder:The LN DLOD1 has no DataSet
+INFO:iedServerBuilder:The LN DSCT1 has no DataSet
+INFO:iedServerBuilder:The LN DECP1 has no DataSet
+INFO:iedServerBuilder:The LN MMXU1 has no DataSet
+INFO:iedServerBuilder:The LN DCCT1 has no DataSet
+INFO:iedServerBuilder:The LN LLN0 has no DataSet
+INFO:iedServerBuilder:The LN MMTR1 has no Report Control Block
+INFO:iedServerBuilder:The LN DLOD1 has no Report Control Block
+INFO:iedServerBuilder:The LN DSCT1 has no Report Control Block
+INFO:iedServerBuilder:The LN DECP1 has no Report Control Block
+INFO:iedServerBuilder:The LN MMXU1 has no Report Control Block
+INFO:iedServerBuilder:The LN DCCT1 has no Report Control Block
+INFO:iedServerBuilder:The LN LLN0 has no Report Control Block
+INFO:iedServerBuilder:Checking LD name of STO1
+INFO:iedServerBuilder:Create Logical Device STO1 in the IED server
+INFO:iedServerBuilder:Start the build process for the LD STO1
+INFO:iedServerBuilder:Start build Data Objects in LN LLN0_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN MMTR_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN FSCH_MV0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 5 DO from the LN Template FSCH_MV0
+WARNING:iedServerBuilder:Dropping DO InRef of type ORG_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO InSyn of type ORG_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO StrTm of type TSG_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO NxtStrTm of type TCS_0 from LN template FSCH_MV0.
+WARNING:iedServerBuilder:Dropping DO ActStrTm of type TCS_0 from LN template FSCH_MV0.
+INFO:iedServerBuilder:Start build Data Objects in LN DSCT_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 4 DO from the LN Template DSCT_0
+WARNING:iedServerBuilder:Dropping DO CRteCost of type CSG_0 from LN template DSCT_0.
+WARNING:iedServerBuilder:Dropping DO HeatRteCost of type CSG_0 from LN template DSCT_0.
+WARNING:iedServerBuilder:Dropping DO HeatRteAct of type CSG_0 from LN template DSCT_0.
+WARNING:iedServerBuilder:Dropping DO Ccy of type CUG_0 from LN template DSCT_0.
+INFO:iedServerBuilder:Start build Data Objects in LN DECP_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 1 DO from the LN Template DECP_0
+WARNING:iedServerBuilder:Dropping DO ElcMsRef of type ORG_0 from LN template DECP_0.
+INFO:iedServerBuilder:Start build Data Objects in LN MMXU_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+INFO:iedServerBuilder:Start build Data Objects in LN FSCC_MV0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 4 DO from the LN Template FSCC_MV0
+WARNING:iedServerBuilder:Dropping DO InRef of type ORG_0 from LN template FSCC_MV0.
+WARNING:iedServerBuilder:Dropping DO Schd of type ORG_0 from LN template FSCC_MV0.
+WARNING:iedServerBuilder:Dropping DO CtlEnt of type ORG_0 from LN template FSCC_MV0.
+WARNING:iedServerBuilder:Dropping DO ActSchdRef of type ORS_0 from LN template FSCC_MV0.
+INFO:iedServerBuilder:Start build Data Objects in LN DSTO_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 7 DO from the LN Template DSTO_0
+WARNING:iedServerBuilder:Dropping DO OutEcpRef of type ORG_0 from LN template DSTO_0.
+WARNING:iedServerBuilder:Dropping DO DschEfc of type CSG_0 from LN template DSTO_0.
+WARNING:iedServerBuilder:Dropping DO ChaEfc of type CSG_0 from LN template DSTO_0.
+WARNING:iedServerBuilder:Dropping DO DschEfcRtg of type CSG_0 from LN template DSTO_0.
+WARNING:iedServerBuilder:Dropping DO ChaEfcRtg of type CSG_0 from LN template DSTO_0.
+WARNING:iedServerBuilder:Dropping DO DERUnit of type ORG_0 from LN template DSTO_0.
+WARNING:iedServerBuilder:Dropping DO EqSto of type ORG_0 from LN template DSTO_0.
+INFO:iedServerBuilder:Start build Data Objects in LN DCCT_0, DO of unsupported CDC type will be dropped, dropping a DO may cause data model inconsistency, please validate the data model afterwards!
+WARNING:iedServerBuilder:Drop 3 DO from the LN Template DCCT_0
+WARNING:iedServerBuilder:Dropping DO CRteCost of type CSG_0 from LN template DCCT_0.
+WARNING:iedServerBuilder:Dropping DO HeatRteCost of type CSG_0 from LN template DCCT_0.
+WARNING:iedServerBuilder:Dropping DO Ccy of type CUG_0 from LN template DCCT_0.
+INFO:iedServerBuilder:The LN MMTR1 has no DataSet
+INFO:iedServerBuilder:The LN STOCTL_FSCH1 has no DataSet
+INFO:iedServerBuilder:The LN DSCT1 has no DataSet
+INFO:iedServerBuilder:The LN DECP1 has no DataSet
+INFO:iedServerBuilder:The LN MMXU1 has no DataSet
+INFO:iedServerBuilder:The LN STOCTL_FSCC1 has no DataSet
+INFO:iedServerBuilder:The LN DSTO1 has no DataSet
+INFO:iedServerBuilder:The LN DCCT1 has no DataSet
+INFO:iedServerBuilder:The LN LLN0 has no DataSet
+INFO:iedServerBuilder:The LN MMTR1 has no Report Control Block
+INFO:iedServerBuilder:The LN STOCTL_FSCH1 has no Report Control Block
+INFO:iedServerBuilder:The LN DSCT1 has no Report Control Block
+INFO:iedServerBuilder:The LN DECP1 has no Report Control Block
+INFO:iedServerBuilder:The LN MMXU1 has no Report Control Block
+INFO:iedServerBuilder:The LN STOCTL_FSCC1 has no Report Control Block
+INFO:iedServerBuilder:The LN DSTO1 has no Report Control Block
+INFO:iedServerBuilder:The LN DCCT1 has no Report Control Block
+INFO:iedServerBuilder:The LN LLN0 has no Report Control Block
+INFO:iedServerBuilder:Data model build process finished
+INFO:iedServerBuilder:The IEC 61850 data model has been successfully generated in: ./model/outputs/2024-03-08T172708_updatedSCL_IEC61850_DER_v1_slim.cid
+INFO:iedServerBuilder:Create the IED server using current version of the data model
+INFO:iedServerBuilder:The IED server has been created
+INFO:iedServerBuilder:Create the lookup table for the running IED
+INFO:iedServerBuilder:Path for lookup CSV: ./tester/IEC61850_DA_lookup_tester_DER_slim.csv
+INFO:iedServerBuilder:Update the instances of DataBuffer and self.dfLookupCSV.
+INFO:iedServerBuilder:List of column names: ['dataSource', 'configJSON', 'GUID', 'isMonitor', 'isControl']
+INFO:iedServerBuilder:Found existing lookup table with the same filename, do not overwrite.
+INFO:iedServerBuilder:Create the GUID list for the running IED
+INFO:iedServerBuilder:Successfully finished the export of GUID list for the running IED
+INFO:iedServerBuilder:The IED server has been started
+INFO:interface.sunspec:-------------------------------------------------------------------
+INFO:interface.sunspec:Start parsing the sunspec mapping table
+INFO:interface.sunspec:IED server has detected 83 active sunspec parameters.
+INFO:interface.sunspec:-------------------------------------------------------------------
+
+INFO:interface.sunspec:-------------------------------------------------------------------
+INFO:interface.sunspec:Start initial reading of the sunspec parameters and update of the lookup table
+ERROR:interface.sunspec:The configured sunspec server 192.168.1.254 is not available, using profiles instead of real-time data
+WARNING:interface.sunspec:No sunspec service available for the host 192.168.1.254:502
+INFO:interface.sunspec:The lookup table of running IED has been updated, but will not overwrite the original CSV file.
+INFO:interface.sunspec:Initial sunspec reading finished, 0 sunspec parameters are available for the IED server.
+INFO:interface.sunspec:-------------------------------------------------------------------
+
+INFO:processing.routine:=================   Begin measurement initialization    =================
+INFO:processing.routine:962 parameters found in the data buffer list
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:The var valAct is not a number, please double check the data type of new value, scaleFactor and unitFactor
+WARNING:processing.routine:Writing valNew directly instead, without multiplicating scaleFactor and unitFactor, this could cause error
+WARNING:processing.routine:Wrong data type for writing, please double check the data type of new value, scaleFactor and unitFactor
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:The var valAct is not a number, please double check the data type of new value, scaleFactor and unitFactor
+WARNING:processing.routine:Writing valNew directly instead, without multiplicating scaleFactor and unitFactor, this could cause error
+WARNING:processing.routine:Wrong data type for writing, please double check the data type of new value, scaleFactor and unitFactor
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+INFO:processing.routine:Data source for the DA demoVirtualCLS_PV1/MMXU1.TotVA configured to be calculated, no initialisation required.
+INFO:processing.routine:Data source for the DA demoVirtualCLS_PV1/MMXU1.TotPF configured to be calculated, no initialisation required.
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+INFO:processing.routine:Data source for the DA demoVirtualCLS_PV1/MMXU1.PhV.phsA configured to be calculated, no initialisation required.
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+WARNING:processing.routine:Data type of dataBuffer.limit is not a number, reset it to default (-999999999,999999999)
+INFO:processing.routine:Display measurements of the running IED server
+INFO:processing.routine:-------------------------------------------------------------------
+INFO:processing.routine:Current values of the IEC 61850 DA from the source:
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.LocKey: true
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.AlmStatus: 1
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.ManufacturerStatus: true
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.OperationalModeStatus: 3
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.WSpt: 3001.0
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.InvStatus: 3
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.CnstWMax: 99999.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.OutWSet: 1.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.WMax: 2222.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMax: 250.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMin: 210.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.GennConnectStatus: 2
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotW: 5000.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVAr: 200.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVA: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotPF: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Hz: 50.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsA: 190.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsB: 230.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsC: 230.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Status: 188.0
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.UseSocPct: 50.5
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorageModeStatus: 2
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorConnectStatus: 1
+INFO:processing.routine:-------------------------------------------------------------------
+
+INFO:processing.routine:-------------------------------------------------------------------
+INFO:processing.routine:Current values of the IEC 61850 DA in the IEC 61850 server:
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.LocKey: None
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.AlmStatus: None
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.ManufacturerStatus: None
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.OperationalModeStatus: None
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.WSpt: None
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.InvStatus: None
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.CnstWMax: None
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.OutWSet: None
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.WMax: None
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMax: None
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMin: None
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.GennConnectStatus: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotW: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVAr: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVA: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotPF: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Hz: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsA: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsB: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsC: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Status: None
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.UseSocPct: None
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorageModeStatus: None
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorConnectStatus: None
+INFO:processing.routine:-------------------------------------------------------------------
+
+INFO:processing.routine:=================   End measurement initialization    =================
+
+********************************************************finish clsInitialization, then clsRoutine
+INFO:pyiec61850cls:-------------------------------------------------------------------
+INFO:pyiec61850cls:Server running
+INFO:pyiec61850cls:Actual current datetime: 2016-06-01 11:00:00; current Unix time: 1464771600.0
+INFO:pyiec61850cls:Current datetime string for data query: 2016-06-01 11:00:00
+INFO:processing.routine:-------------------------------------------------------------------
+INFO:processing.routine:Start refreshing connection objects.
+INFO:processing.routine:Currently active data interfaces are: ['disabled', 'number', 'calculation', 'random'].
+INFO:processing.routine:No connObj update is required for the type "number", proceed to the next step.
+INFO:processing.routine:No connObj update is required for the type "calculation", proceed to the next step.
+INFO:processing.routine:No connObj update is required for the type "random", proceed to the next step.
+INFO:processing.routine:Refreshing connection objects has been completed for this iteration.
+INFO:processing.routine:-------------------------------------------------------------------
+
+INFO:processing.routine:=================   Begin measurement update    =================
+INFO:processing.routine:Currently the update interval is configured as 30 seconds
+@@@@@@@@@@@@@@@@@@@@@@@@calculation demoVirtualCLS_PV1/MMXU1.PhV.phsA: dataBuffer.valueSource 191.0
+INFO:interface.iec61850MMS:-------------------------------------------------------------------
+demoVirtualCLS_PV1/DINV1.WSpt: 3001.0
+demoVirtualCLS_PV1/DGEN1.CnstWMax: 99999.0
+demoVirtualCLS_PV1/DGEN1.OutWSet: 1.0
+demoVirtualCLS_PV1/DGEN1.WMax: 2222.0
+demoVirtualCLS_PV1/DGEN1.VMax: 250.0
+demoVirtualCLS_PV1/DGEN1.VMin: 210.0
+*
+*
+*
+***MMXU1_TotW from modbus server: 500.0***
+*
+*
+
+demoVirtualCLS_PV1/MMXU1.TotW: 500.0
+demoVirtualCLS_PV1/MMXU1.TotVAr: 200.0
+demoVirtualCLS_PV1/MMXU1.Hz: 50.000301361083984
+demoVirtualCLS_PV1/MMXU1.PhV.phsA: 191.0
+demoVirtualCLS_PV1/MMXU1.PhV.phsB: 229.94729614257812
+demoVirtualCLS_PV1/MMXU1.PhV.phsC: 230.0133056640625
+demoVirtualCLS_PV1/MMXU1.Status: 188.0
+demoVirtualCLS_STO1/DSTO1.UseSocPct: 50.5
+INFO:interface.iec61850MMS:-------------------------------------------------------------------
+
+INFO:processing.routine:=================   End measurement update    =================
+
+INFO:processing.routine:Display measurements of the running IED server
+INFO:processing.routine:-------------------------------------------------------------------
+INFO:processing.routine:Current values of the IEC 61850 DA from the source:
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.LocKey: True
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.AlmStatus: 1
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.ManufacturerStatus: True
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.OperationalModeStatus: 3
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.WSpt: 3001.0
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.InvStatus: 3
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.CnstWMax: 99999.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.OutWSet: 1.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.WMax: 2222.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMax: 250.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMin: 210.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.GennConnectStatus: 2
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotW: 500.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVAr: 200.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVA: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotPF: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Hz: 50.0003
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsA: 191.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsB: 229.9473
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsC: 230.0133
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Status: 188.0
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.UseSocPct: 50.5
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorageModeStatus: 2
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorConnectStatus: 1
+INFO:processing.routine:-------------------------------------------------------------------
+
+INFO:processing.routine:-------------------------------------------------------------------
+INFO:processing.routine:Current values of the IEC 61850 DA in the IEC 61850 server:
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.LocKey: True
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.AlmStatus: 1
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.ManufacturerStatus: True
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.OperationalModeStatus: 3
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.WSpt: 3001.0
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.InvStatus: 3
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.CnstWMax: 99999.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.OutWSet: 1.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.WMax: 2222.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMax: 250.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMin: 210.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.GennConnectStatus: 2
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotW: 500.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVAr: 200.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVA: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotPF: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Hz: 50.000301361083984
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsA: 191.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsB: 229.94729614257812
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsC: 230.0133056640625
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Status: 188.0
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.UseSocPct: 50.5
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorageModeStatus: 2
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorConnectStatus: 1
+INFO:processing.routine:-------------------------------------------------------------------
+
+INFO:pyiec61850cls:Update measurement was successful.
+INFO:interface.iec61850MMS:-------------------------------------------------------------------
+INFO:interface.iec61850MMS:Control watchdog loops over dataBuffer instance to inspect control actions.
+INFO:interface.iec61850MMS:CLS configuration requires 10 iterations, each lasts 2.5 seconds.
+INFO:interface.iec61850MMS:Performing control inspection iteration 1
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.
+INFO:interface.iec61850MMS:Performing control inspection iteration 2
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.
+INFO:interface.iec61850MMS:Performing control inspection iteration 3
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.
+INFO:interface.iec61850MMS:Performing control inspection iteration 4
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.
+INFO:interface.iec61850MMS:Performing control inspection iteration 5
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.
+INFO:interface.iec61850MMS:Performing control inspection iteration 6
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.
+INFO:interface.iec61850MMS:Performing control inspection iteration 7
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.
+INFO:interface.iec61850MMS:Performing control inspection iteration 8
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.
+INFO:interface.iec61850MMS:Performing control inspection iteration 9
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.
+INFO:interface.iec61850MMS:Performing control inspection iteration 10
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.
+INFO:interface.iec61850MMS:Inspection of control actions, finished.
+INFO:interface.iec61850MMS:0 control command is executed in the last interval
+INFO:interface.iec61850MMS:-------------------------------------------------------------------
+
+INFO:pyiec61850cls:-------------------------------------------------------------------
+INFO:pyiec61850cls:Export CSV to local data storage has been triggered.
+INFO:pyiec61850cls:Export CSV to local data storage is completed.
+INFO:pyiec61850cls:-------------------------------------------------------------------
+
+INFO:pyiec61850cls:-------------------------------------------------------------------
+INFO:pyiec61850cls:Upload dataBuffer statistics to remote database influxdb has been triggered.
+INFO:pyiec61850cls:Upload dataBuffer statistics to remote database influxdb is completed.
+INFO:pyiec61850cls:-------------------------------------------------------------------
+
+INFO:pyiec61850cls:Data processing time for the current iteration: 0.18918824195861816 seconds
+INFO:pyiec61850cls:Total duration of the current iteration: 25.25821566581726 seconds
+INFO:pyiec61850cls:Let the time sleep to round up for pre-configured interval, and move to the next iteration
+INFO:pyiec61850cls:-------------------------------------------------------------------
+
+INFO:pyiec61850cls:-------------------------------------------------------------------
+INFO:pyiec61850cls:Server running
+INFO:pyiec61850cls:Actual current datetime: 2016-06-01 11:00:30; current Unix time: 1464771630.0
+INFO:pyiec61850cls:Current datetime string for data query: 2016-06-01 11:00:00
+INFO:processing.routine:-------------------------------------------------------------------
+INFO:processing.routine:Start refreshing connection objects.
+INFO:processing.routine:Currently active data interfaces are: ['disabled', 'number', 'calculation', 'random'].
+INFO:processing.routine:No connObj update is required for the type "number", proceed to the next step.
+INFO:processing.routine:No connObj update is required for the type "calculation", proceed to the next step.
+INFO:processing.routine:No connObj update is required for the type "random", proceed to the next step.
+INFO:processing.routine:Refreshing connection objects has been completed for this iteration.
+INFO:processing.routine:-------------------------------------------------------------------
+
+INFO:processing.routine:=================   Begin measurement update    =================
+INFO:processing.routine:Currently the update interval is configured as 30 seconds
+@@@@@@@@@@@@@@@@@@@@@@@@calculation demoVirtualCLS_PV1/MMXU1.PhV.phsA: dataBuffer.valueSource 192.0
+INFO:interface.iec61850MMS:-------------------------------------------------------------------
+demoVirtualCLS_PV1/DINV1.WSpt: 3001.0
+demoVirtualCLS_PV1/DGEN1.CnstWMax: 99999.0
+demoVirtualCLS_PV1/DGEN1.OutWSet: 1.0
+demoVirtualCLS_PV1/DGEN1.WMax: 2222.0
+demoVirtualCLS_PV1/DGEN1.VMax: 250.0
+demoVirtualCLS_PV1/DGEN1.VMin: 210.0
+*
+*
+*
+***MMXU1_TotW from modbus server: 500.0***
+*
+*
+
+demoVirtualCLS_PV1/MMXU1.TotW: 500.0
+demoVirtualCLS_PV1/MMXU1.TotVAr: 200.0
+demoVirtualCLS_PV1/MMXU1.Hz: 50.08599853515625
+demoVirtualCLS_PV1/MMXU1.PhV.phsA: 192.0
+demoVirtualCLS_PV1/MMXU1.PhV.phsB: 229.9364013671875
+demoVirtualCLS_PV1/MMXU1.PhV.phsC: 230.0948944091797
+demoVirtualCLS_PV1/MMXU1.Status: 188.0
+demoVirtualCLS_STO1/DSTO1.UseSocPct: 50.5
+INFO:interface.iec61850MMS:-------------------------------------------------------------------
+
+INFO:processing.routine:=================   End measurement update    =================
+
+INFO:processing.routine:Display measurements of the running IED server
+INFO:processing.routine:-------------------------------------------------------------------
+INFO:processing.routine:Current values of the IEC 61850 DA from the source:
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.LocKey: True
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.AlmStatus: 1
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.ManufacturerStatus: True
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.OperationalModeStatus: 3
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.WSpt: 3001.0
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.InvStatus: 3
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.CnstWMax: 99999.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.OutWSet: 1.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.WMax: 2222.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMax: 250.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMin: 210.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.GennConnectStatus: 2
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotW: 500.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVAr: 200.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVA: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotPF: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Hz: 50.086000000000006
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsA: 192.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsB: 229.93640000000002
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsC: 230.0949
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Status: 188.0
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.UseSocPct: 50.5
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorageModeStatus: 2
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorConnectStatus: 1
+INFO:processing.routine:-------------------------------------------------------------------
+
+INFO:processing.routine:-------------------------------------------------------------------
+INFO:processing.routine:Current values of the IEC 61850 DA in the IEC 61850 server:
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.LocKey: True
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.AlmStatus: 1
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.ManufacturerStatus: True
+INFO:processing.routine:demoVirtualCLS_PV1/LLN0.OperationalModeStatus: 3
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.WSpt: 3001.0
+INFO:processing.routine:demoVirtualCLS_PV1/DINV1.InvStatus: 3
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.CnstWMax: 99999.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.OutWSet: 1.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.WMax: 2222.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMax: 250.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.VMin: 210.0
+INFO:processing.routine:demoVirtualCLS_PV1/DGEN1.GennConnectStatus: 2
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotW: 500.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVAr: 200.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotVA: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.TotPF: None
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Hz: 50.08599853515625
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsA: 192.0
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsB: 229.9364013671875
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.PhV.phsC: 230.0948944091797
+INFO:processing.routine:demoVirtualCLS_PV1/MMXU1.Status: 188.0
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.UseSocPct: 50.5
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorageModeStatus: 2
+INFO:processing.routine:demoVirtualCLS_STO1/DSTO1.StorConnectStatus: 1
+INFO:processing.routine:-------------------------------------------------------------------
+
+INFO:pyiec61850cls:Update measurement was successful.
+INFO:interface.iec61850MMS:-------------------------------------------------------------------
+INFO:interface.iec61850MMS:Control watchdog loops over dataBuffer instance to inspect control actions.
+INFO:interface.iec61850MMS:CLS configuration requires 10 iterations, each lasts 2.5 seconds.
+INFO:interface.iec61850MMS:Performing control inspection iteration 1
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.
+INFO:interface.iec61850MMS:Performing control inspection iteration 2
+INFO:interface.iec61850MMS:7 DO under control supervision in this iteration.

@@ -1,0 +1,87 @@
+2024-03-08 13:28:22 Note: --cipher is not set. OpenVPN versions before 2.5 defaulted to BF-CBC as fallback when cipher negotiation failed in this case. If you need this fallback please add '--data-ciphers-fallback BF-CBC' to your configuration and/or add BF-CBC to --data-ciphers.
+2024-03-08 13:28:22 Note: ovpn-dco-win driver is missing, disabling data channel offload.
+2024-03-08 13:28:22 OpenVPN 2.6.9 [git:v2.6.9/6640a10bf6d84eee] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Feb 12 2024
+2024-03-08 13:28:22 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-03-08 13:28:22 library versions: OpenSSL 3.2.0 23 Nov 2023, LZO 2.10
+2024-03-08 13:28:22 DCO version: N/A
+2024-03-08 13:28:22 MANAGEMENT: TCP Socket listening on [AF_INET]127.0.0.1:25342
+2024-03-08 13:28:22 Need hold release from management interface, waiting...
+2024-03-08 13:28:23 MANAGEMENT: Client connected from [AF_INET]127.0.0.1:48061
+2024-03-08 13:28:23 MANAGEMENT: CMD 'state on'
+2024-03-08 13:28:23 MANAGEMENT: CMD 'log on all'
+2024-03-08 13:28:23 MANAGEMENT: CMD 'echo on all'
+2024-03-08 13:28:23 MANAGEMENT: CMD 'bytecount 5'
+2024-03-08 13:28:23 MANAGEMENT: CMD 'state'
+2024-03-08 13:28:23 MANAGEMENT: CMD 'hold off'
+2024-03-08 13:28:23 MANAGEMENT: CMD 'hold release'
+2024-03-08 13:28:23 TCP/UDP: Preserving recently used remote address: [AF_INET]172.17.244.162:1194
+2024-03-08 13:28:23 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-03-08 13:28:23 Attempting to establish TCP connection with [AF_INET]172.17.244.162:1194
+2024-03-08 13:28:23 MANAGEMENT: >STATE:1709900903,TCP_CONNECT,,,,,,
+2024-03-08 13:28:23 TCP connection established with [AF_INET]172.17.244.162:1194
+2024-03-08 13:28:23 TCPv4_CLIENT link local: (not bound)
+2024-03-08 13:28:23 TCPv4_CLIENT link remote: [AF_INET]172.17.244.162:1194
+2024-03-08 13:28:23 MANAGEMENT: >STATE:1709900903,WAIT,,,,,,
+2024-03-08 13:28:23 MANAGEMENT: >STATE:1709900903,AUTH,,,,,,
+2024-03-08 13:28:23 TLS: Initial packet from [AF_INET]172.17.244.162:1194, sid=62c16fb8 a3f3f394
+2024-03-08 13:28:23 VERIFY OK: depth=1, CN=Easy-RSA CA
+2024-03-08 13:28:23 VERIFY KU OK
+2024-03-08 13:28:23 Validating certificate extended key usage
+2024-03-08 13:28:23 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-03-08 13:28:23 VERIFY EKU OK
+2024-03-08 13:28:23 VERIFY OK: depth=0, CN=server
+2024-03-08 13:28:23 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-03-08 13:28:23 [server] Peer Connection Initiated with [AF_INET]172.17.244.162:1194
+2024-03-08 13:28:23 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-03-08 13:28:23 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-03-08 13:28:23 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1 bypass-dhcp,dhcp-option DNS 172.17.240.1,block-outside-dns,route-gateway 10.8.0.1,topology subnet,ping 10,ping-restart 120,ifconfig 10.8.0.2 255.255.255.0,peer-id 0,cipher AES-256-GCM'
+2024-03-08 13:28:23 OPTIONS IMPORT: --ifconfig/up options modified
+2024-03-08 13:28:23 OPTIONS IMPORT: route options modified
+2024-03-08 13:28:23 OPTIONS IMPORT: route-related options modified
+2024-03-08 13:28:23 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-03-08 13:28:23 interactive service msg_channel=916
+2024-03-08 13:28:23 ROUTE_GATEWAY 141.59.41.224/255.255.240.0 I=8 HWADDR=c8:5b:76:c6:e6:59
+2024-03-08 13:28:23 ROUTE: bypass_host_route[0]=141.59.85.251
+2024-03-08 13:28:23 open_tun
+2024-03-08 13:28:23 tap-windows6 device [LAN-Verbindung 2] opened
+2024-03-08 13:28:23 TAP-Windows Driver Version 9.26 
+2024-03-08 13:28:23 Set TAP-Windows TUN subnet mode network/local/netmask = 10.8.0.0/10.8.0.2/255.255.255.0 [SUCCEEDED]
+2024-03-08 13:28:23 Notified TAP-Windows driver to set a DHCP IP/netmask of 10.8.0.2/255.255.255.0 on interface {B2AF1499-4217-496F-94B2-88984D9D483F} [DHCP-serv: 10.8.0.0, lease-time: 31536000]
+2024-03-08 13:28:23 Successful ARP Flush on interface [26] {B2AF1499-4217-496F-94B2-88984D9D483F}
+2024-03-08 13:28:23 MANAGEMENT: >STATE:1709900903,ASSIGN_IP,,10.8.0.2,,,,
+2024-03-08 13:28:23 IPv4 MTU set to 1500 on interface 26 using service
+2024-03-08 13:28:23 Blocking outside dns using service succeeded.
+2024-03-08 13:28:23 Data Channel: cipher 'AES-256-GCM', peer-id: 0
+2024-03-08 13:28:23 Timers: ping 10, ping-restart 120
+2024-03-08 13:28:28 TEST ROUTES: 1/1 succeeded len=0 ret=1 a=0 u/d=up
+2024-03-08 13:28:28 C:\WINDOWS\system32\route.exe ADD 172.17.244.162 MASK 255.255.255.255 141.59.41.224
+2024-03-08 13:28:28 Route addition via service succeeded
+2024-03-08 13:28:28 C:\WINDOWS\system32\route.exe ADD 141.59.85.251 MASK 255.255.255.255 141.59.41.224
+2024-03-08 13:28:28 Route addition via service succeeded
+2024-03-08 13:28:28 C:\WINDOWS\system32\route.exe ADD 0.0.0.0 MASK 128.0.0.0 10.8.0.1
+2024-03-08 13:28:28 Route addition via service succeeded
+2024-03-08 13:28:28 C:\WINDOWS\system32\route.exe ADD 128.0.0.0 MASK 128.0.0.0 10.8.0.1
+2024-03-08 13:28:28 Route addition via service succeeded
+2024-03-08 13:28:28 Initialization Sequence Completed
+2024-03-08 13:28:28 MANAGEMENT: >STATE:1709900908,CONNECTED,SUCCESS,10.8.0.2,172.17.244.162,1194,172.17.240.1,48074
+2024-03-08 14:27:13 VERIFY OK: depth=1, CN=Easy-RSA CA
+2024-03-08 14:27:13 VERIFY KU OK
+2024-03-08 14:27:13 Validating certificate extended key usage
+2024-03-08 14:27:13 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-03-08 14:27:13 VERIFY EKU OK
+2024-03-08 14:27:13 VERIFY OK: depth=0, CN=server
+2024-03-08 14:27:13 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-03-08 15:26:03 VERIFY OK: depth=1, CN=Easy-RSA CA
+2024-03-08 15:26:03 VERIFY KU OK
+2024-03-08 15:26:03 Validating certificate extended key usage
+2024-03-08 15:26:03 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-03-08 15:26:03 VERIFY EKU OK
+2024-03-08 15:26:03 VERIFY OK: depth=0, CN=server
+2024-03-08 15:26:03 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-03-08 16:24:53 VERIFY OK: depth=1, CN=Easy-RSA CA
+2024-03-08 16:24:53 VERIFY KU OK
+2024-03-08 16:24:53 Validating certificate extended key usage
+2024-03-08 16:24:53 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-03-08 16:24:53 VERIFY EKU OK
+2024-03-08 16:24:53 VERIFY OK: depth=0, CN=server
+2024-03-08 16:24:53 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
